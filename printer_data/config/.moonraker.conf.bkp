@@ -46,11 +46,27 @@ channel = stable
 repo = mainsail-crew/mainsail
 path = ~/mainsail
 
+[update_manager crowsnest]
+type = git_repo
+path = ~/crowsnest
+origin = https://github.com/mainsail-crew/crowsnest.git
+managed_services = crowsnest
+install_script = tools/pkglist.sh
+
 [update_manager print_area_bed_mesh]
 type = git_repo
 path = ~/print_area_bed_mesh
 origin = https://github.com/Turge08/print_area_bed_mesh.git
 is_system_service = False
+
+[update_manager KlipperScreen]
+type = git_repo
+path = ~/KlipperScreen
+origin = https://github.com/jordanruthe/KlipperScreen.git
+virtualenv = ~/.KlipperScreen-env
+requirements = scripts/KlipperScreen-requirements.txt
+system_dependencies = scripts/system-dependencies.json
+managed_services = KlipperScreen
 
 [update_manager klipper-toolchanger]
 type = git_repo
@@ -59,4 +75,12 @@ path = ~/klipper-toolchanger
 origin = https://github.com/viesturz/klipper-toolchanger.git
 managed_services = klipper
 primary_branch = main
+
+[update_manager axiscope]
+type = git_repo
+path = /home/biqu/axiscope
+origin = https://github.com/nic335/Axiscope.git
+primary_branch = main
+is_system_service = True
+managed_services = axiscope
 
