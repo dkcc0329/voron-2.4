@@ -14,16 +14,18 @@ trusted_clients =
 	::1/128
 	100.85.116.41
 cors_domains = 
-	*.lan
-	*.local
-	*://localhost
-	*://localhost:*
+	http://192.168.100.37
+	http://*.lan
+	http://*.local
+	http://localhost
+	http://127.0.0.1
+	http://dkvoron.tail0842d7.ts.net
 	*://my.mainsail.xyz
 	*://app.fluidd.xyz
-	dkvoron.tail0842d7.ts.net
 
 [file_manager]
 enable_object_processing = True
+default_metadata_parser_timeout = 30
 
 [octoprint_compat]
 
